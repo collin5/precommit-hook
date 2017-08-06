@@ -1,0 +1,2 @@
+# precommit-hook
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/095d63a592e74b239b28b5e19e689709)](https://www.codacy.com/app/abtcolns/precommit-hook?utm_source=github.com&utm_medium=referral&utm_content=collin5/precommit-hook&utm_campaign=badger)

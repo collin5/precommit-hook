@@ -102,3 +102,4 @@ pip-selfcheck.json
 
 # mypy
 .mypy_cache/
+*.swp

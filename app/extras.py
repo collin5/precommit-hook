@@ -20,10 +20,10 @@ SETTINGS_WITH_PARAMS = (
 
 # colorize output
 COLOR = {
-    'red': '\033[1;31m',
-    'green': '\033[1;32m',
+    'red': '\\033[1;31m',
+    'green': '\\033[1;32m',
     'yellow': '\033[1;33m',
-    'off': '\033[1;m'
+    'off': '\\033[1;m'
 }
 
 
@@ -40,7 +40,7 @@ def parse_settings(config_file):
         config = configparser.ConfigParser()
         config.read(config_file)
     except configparser.MissingSectionHeaderError as e:
-        print("ERROR: project lint config file is broken:\n")
+        print("ERROR: project lint config file is broken:\\n")
         print(repr(e))
         sys.exit(1)
     # read project lint settings for pep8 and flake8
@@ -75,7 +75,7 @@ def get_changed_files():
     """
     files = []
     filelist = system('git', 'diff', '--cached', '--name-status').strip()
-    for line in str(filelist, 'utf-8').split('\n'):
+    for line in str(filelist, 'utf-8').split('\\n'):
         action, filename = line.strip().split()
         if filename.endswith('.py') and action != 'D':
             files.append(filename)
@@ -91,7 +91,7 @@ def lint(cmd, files, settings):
     args = settings[:]
     args.insert(0, cmd)
     args.extend(files)
-    return str(system(*args), 'utf-8').strip().split('\n')
+    return str(system(*args), 'utf-8').strip().split('\\n')
 
 
 def main():
@@ -110,7 +110,7 @@ def main():
         print("Python lint: {green}OK{off}".format(**COLOR))
         return
     print("Python lint: {red}FAIL{off}".format(**COLOR))
-    print("\n".join(sorted(errors)))
+    print("\\n".join(sorted(errors)))
     print()
     print("Aborting commit due to python lint errors.")
     sys.exit(1)

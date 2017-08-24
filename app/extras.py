@@ -22,7 +22,7 @@ SETTINGS_WITH_PARAMS = (
 COLOR = {
     'red': '\\033[1;31m',
     'green': '\\033[1;32m',
-    'yellow': '\033[1;33m',
+    'yellow': '\\033[1;33m',
     'off': '\\033[1;m'
 }
 

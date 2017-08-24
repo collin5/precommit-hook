@@ -24,6 +24,7 @@
 from setuptools.command.install import install
 from setuptools.command.develop import develop
 from setuptools.command.egg_info import egg_info
+from app.extras import template
 import os
 
 
@@ -38,11 +39,12 @@ class Exec:
                 os.system("mkdir -p .git/hooks")
         else:
             os.system("git init")
-        # finally copy and set permissions
-        os.system(
-            "cp tmp/template.dat .git/hooks/pre-commit && sudo chmod +x .git/hooks/pre-commit")
-        print("Precommit added successfully, continuing ...")
 
+        # finally copy and set permissions
+        with open('.git/hooks/pre-commit', 'wb') as f:
+            f.write(template.encode())
+            os.system("sudo chmod +x .git/hooks/pre-commit")
+        print("Precommit added successfully, continuing ...")
         return True
 
 

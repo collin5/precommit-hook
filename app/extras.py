@@ -1,4 +1,7 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+template = '''#!/usr/bin/env python
 
 import os
 import sys
@@ -23,13 +26,13 @@ COLOR = {
     'off': '\033[1;m'
 }
 
+
 def parse_settings(config_file):
     """
     Get pep8 and flake8 lint settings from config file.
     Useful for define per-project lint options.
     """
     settings = {'pep8': list(), 'flake8': list()}
-    
     # read project settings
     if not os.path.exists(config_file) or not os.path.isfile(config_file):
         return settings
@@ -40,7 +43,6 @@ def parse_settings(config_file):
         print("ERROR: project lint config file is broken:\n")
         print(repr(e))
         sys.exit(1)
-
     # read project lint settings for pep8 and flake8
     for linter in settings.keys():
         try:
@@ -56,6 +58,7 @@ def parse_settings(config_file):
             pass
     return settings
 
+
 def system(*args, **kwargs):
     """
     Run system command.
@@ -64,6 +67,7 @@ def system(*args, **kwargs):
     proc = subprocess.Popen(args, **kwargs)
     out, err = proc.communicate()
     return out
+
 
 def get_changed_files():
     """
@@ -77,29 +81,27 @@ def get_changed_files():
             files.append(filename)
     return files
 
+
 def lint(cmd, files, settings):
     """
     Run pep8 or flake8 lint.
     """
-
     if cmd not in ('pep8', 'flake8'):
         raise Exception("Unknown lint command: {}".format(cmd))
-
     args = settings[:]
     args.insert(0, cmd)
     args.extend(files)
     return str(system(*args), 'utf-8').strip().split('\n')
 
+
 def main():
     """
     Do work
     """
-
     files = get_changed_files()
     if not files:
         print("Python lint: {yellow}SKIP{off}".format(**COLOR))
         return
-
     config_file = os.path.join(os.path.abspath(os.curdir), '.flake8')
     settings = parse_settings(config_file)
     errors = lint('flake8', files, settings['flake8'])
@@ -107,12 +109,15 @@ def main():
     if not len(errors) or errors[0] is '':
         print("Python lint: {green}OK{off}".format(**COLOR))
         return
-
     print("Python lint: {red}FAIL{off}".format(**COLOR))
     print("\n".join(sorted(errors)))
     print()
     print("Aborting commit due to python lint errors.")
     sys.exit(1)
 
+
 if __name__ == '__main__':
     main()
+
+
+'''

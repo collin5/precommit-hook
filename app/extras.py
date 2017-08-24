@@ -22,7 +22,7 @@ SETTINGS_WITH_PARAMS = (
 COLOR = {
     'red': '\\033[1;31m',
     'green': '\\033[1;32m',
-    'yellow': '\033[1;33m',
+    'yellow': '\\033[1;33m',
     'off': '\\033[1;m'
 }
 
@@ -75,7 +75,7 @@ def get_changed_files():
     """
     files = []
     filelist = system('git', 'diff', '--cached', '--name-status').strip()
-    for line in str(filelist, 'utf-8').split('\\n'):
+    for line in str(filelist.decode('utf-8')).split('\\n'):
         action, filename = line.strip().split()
         if filename.endswith('.py') and action != 'D':
             files.append(filename)

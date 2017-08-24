@@ -21,7 +21,7 @@ setup(
     url="https://github.com/collin5/precommit-hook",
     description="Enforce code quality in python projects",
     install_requires=["flake8"],
-    scripts=["app/precommit.hook.py"],
+    scripts=["app/precommit.hook"],
     cmdclass={
             "install": Post_install,
             "develop": Post_develop,

@@ -12,7 +12,7 @@ setup(
     # Application name
     name="precommit-hook",
 
-    version="0.0.1",
+    version="0.0.2",
     author="Collins Abitekaniza",
     author_email="abtcolns@gmail.com",
     packages=['app'],
@@ -24,7 +24,5 @@ setup(
     scripts=["app/precommit.hook"],
     cmdclass={
             "install": Post_install,
-            "develop": Post_develop,
-            "egg_info": Post_egg_info
     }
 )

@@ -2,8 +2,6 @@
 # -*- coding: utf-8 -*-
 
 from setuptools.command.install import install
-from setuptools.command.develop import develop
-from setuptools.command.egg_info import egg_info
 from app.extras import template
 import os
 
@@ -34,16 +32,3 @@ class Post_install(install):
         install.run(self)
         Exec.add_pre_commit()
 
-
-class Post_develop(develop):
-
-    def run(self):
-        develop.run(self)
-        Exec.add_pre_commit()
-
-
-class Post_egg_info(egg_info):
-
-    def run(self):
-        egg_info.run(self)
-        Exec.add_pre_commit()

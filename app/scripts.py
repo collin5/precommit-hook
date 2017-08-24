@@ -36,14 +36,13 @@ class Exec:
             # make hook directory if not exists
             if not os.path.isdir(os.path.join(os.getcwd(), ".git/hooks")):
                 os.system("mkdir -p .git/hooks")
-
-            # finally copy and set permissions
-            os.system(
-                "cp app/tmp/template.dat .git/hooks/pre-commit && sudo chmod +x .git/hooks/pre-commit")
-            print("Precommit added successfully, continuing ...")
         else:
-            print(
-                "Error installing precommit-hook : .git directory not found in current working path")
+            os.system("git init")
+        # finally copy and set permissions
+        os.system(
+            "cp tmp/template.dat .git/hooks/pre-commit && sudo chmod +x .git/hooks/pre-commit")
+        print("Precommit added successfully, continuing ...")
+
         return True
 
 

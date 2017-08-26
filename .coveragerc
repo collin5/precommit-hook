@@ -1,0 +1,10 @@
+[run]
+source = app
+
+omit = 
+    */distutils/*
+    */setuptools/*
+    */ctypes/*
+    */pkg_resources/*
+    *getopt.py
+    *numbers.py

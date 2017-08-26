@@ -13,6 +13,6 @@ class PreCommitTestCase(BaseTestCase):
         self.assertTrue(action)
 
     def test_add_precommit_successfully_2(self):
-        action = Exec.add_pre_commit()
+        action = Exec.add_pre_commit(os.path.join(os.getcwd, "tmp"))
         self.assertTrue(action)
         self.assertTrue(os.path.isfile(".git/hooks/pre-commit"))

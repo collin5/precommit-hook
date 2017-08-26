@@ -23,7 +23,6 @@ COLOR = {
     'red': '\\033[1;31m',
     'green': '\\033[1;32m',
     'yellow': '\\033[1;33m',
-    'off': '\\033[1;m'
 }
 
 
@@ -91,7 +90,7 @@ def lint(cmd, files, settings):
     args = settings[:]
     args.insert(0, cmd)
     args.extend(files)
-    return str(system(*args), 'utf-8').strip().split('\\n')
+    return str(system(*args).decode('utf-8')).strip().split('\\n')
 
 
 def main():
@@ -107,11 +106,11 @@ def main():
     errors = lint('flake8', files, settings['flake8'])
 
     if not len(errors) or errors[0] is '':
-        print("Python lint: {green}OK{off}".format(**COLOR))
+        print("Python lint: {}OK".format(COLOR['green']))
         return
-    print("Python lint: {red}FAIL{off}".format(**COLOR))
+    print("Python lint: {}FAIL".format(COLOR['red']))
     print("\\n".join(sorted(errors)))
-    print()
+    print("\033[m")
     print("Aborting commit due to python lint errors.")
     sys.exit(1)
 

@@ -99,14 +99,14 @@ def main():
     """
     files = get_changed_files()
     if not files:
-        print("Python lint: {}SKIP".format(COLOR['yellow']))
+        print("Python lint: {}SKIP \033[m".format(COLOR['yellow']))
         return
     config_file = os.path.join(os.path.abspath(os.curdir), '.flake8')
     settings = parse_settings(config_file)
     errors = lint('flake8', files, settings['flake8'])
 
     if not len(errors) or errors[0] is '':
-        print("Python lint: {}OK".format(COLOR['green']))
+        print("Python lint: {}OK \033[m".format(COLOR['green']))
         return
     print("Python lint: {}FAIL".format(COLOR['red']))
     print("\\n".join(sorted(errors)))

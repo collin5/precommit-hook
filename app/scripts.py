@@ -14,14 +14,14 @@ class Exec:
         if os.path.isdir(os.path.join(path, ".git")):
             # make hook directory if not exists
             if not os.path.isdir(os.path.join(os.getcwd(), ".git/hooks")):
-                os.system("mkdir -p {}.git/hooks".format(path))
+                os.system("mkdir -p {}/.git/hooks".format(path))
         else:
-            os.system("git init")
+            os.system("git init {}".format(path))
 
         # finally copy and set permissions
-        with open('{}.git/hooks/pre-commit'.format(path), 'wb') as f:
+        with open('{}/.git/hooks/pre-commit'.format(path), 'wb') as f:
             f.write(template.encode())
-            os.system("sudo chmod +x {}.git/hooks/pre-commit".format(path))
+            os.system("sudo chmod +x {}/.git/hooks/pre-commit".format(path))
         print("Precommit added successfully, continuing ...")
         return True
 

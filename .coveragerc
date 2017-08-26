@@ -8,3 +8,4 @@ omit =
     */pkg_resources/*
     *getopt.py
     *numbers.py
+    */virtualenv/*

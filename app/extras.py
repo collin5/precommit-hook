@@ -99,7 +99,7 @@ def main():
     """
     files = get_changed_files()
     if not files:
-        print("Python lint: {yellow}SKIP{off}".format(**COLOR))
+        print("Python lint: {}SKIP".format(COLOR['yellow']))
         return
     config_file = os.path.join(os.path.abspath(os.curdir), '.flake8')
     settings = parse_settings(config_file)

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from app.scripts import *
+from app.scripts import Post_install
 from setuptools import setup
 
 setup(
@@ -9,7 +9,7 @@ setup(
     # Application name
     name="precommit-hook",
 
-    version="0.1.0",
+    version="0.1.6",
     author="Collins Abitekaniza",
     author_email="abtcolns@gmail.com",
     packages=['app'],

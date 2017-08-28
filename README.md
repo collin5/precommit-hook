@@ -1,4 +1,4 @@
-[![asciicast](https://asciinema.org/a/135255.png)](https://asciinema.org/a/135255)
+<a href="https://asciinema.org/a/135255" target="_blank"><img src="https://asciinema.org/a/135255.png" height="400" /></a>
 # precommit-hook
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/095d63a592e74b239b28b5e19e689709)](https://www.codacy.com/app/abtcolns/precommit-hook?utm_source=github.com&utm_medium=referral&utm_content=collin5/precommit-hook&utm_campaign=badger)
 [![Build Status](https://travis-ci.org/collin5/precommit-hook.svg?branch=master)](https://travis-ci.org/collin5/precommit-hook)

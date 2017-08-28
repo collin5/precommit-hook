@@ -9,7 +9,7 @@ setup(
     # Application name
     name="precommit-hook",
 
-    version="0.1.6",
+    version="0.1.7",
     author="Collins Abitekaniza",
     author_email="abtcolns@gmail.com",
     packages=['app'],

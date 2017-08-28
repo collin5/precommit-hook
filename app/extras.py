@@ -75,9 +75,12 @@ def get_changed_files():
     files = []
     filelist = system('git', 'diff', '--cached', '--name-status').strip()
     for line in str(filelist.decode('utf-8')).split('\\n'):
-        action, filename = line.strip().split()
-        if filename.endswith('.py') and action != 'D':
-            files.append(filename)
+        try:
+            action, filename = line.strip().split()
+            if filename.endswith('.py') and action != 'D':
+                files.append(filename)
+        except Exception as ex:
+            pass
     return files
 
 

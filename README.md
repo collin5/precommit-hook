@@ -4,7 +4,6 @@
 [![Build Status](https://travis-ci.org/collin5/precommit-hook.svg?branch=master)](https://travis-ci.org/collin5/precommit-hook)
 [![Coverage Status](https://coveralls.io/repos/github/collin5/precommit-hook/badge.svg?branch=master)](https://coveralls.io/github/collin5/precommit-hook?branch=master)
 [![PyPI version](https://badge.fury.io/py/precommit-hook.svg)](https://badge.fury.io/py/precommit-hook)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Auto check quality of your python code before commiting
 
@@ -21,6 +20,7 @@ In your project folder, just do
 precommit.hook
 ```
 ## License
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 This project is licensed under MIT license. see the ![LICENSE.md](LICENSE) file for details
 
 ## Authors

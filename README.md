@@ -27,5 +27,5 @@ See list of <a href="https://github.com/collin5/precommit-hook/graphs/contributo
 
 ## Credits
 <ul>
- <li>Walusimbi Mahad <a href="https://github.com/andela-engmkwalusimbi">link</a></li>
+ <li><a href="https://github.com/andela-engmkwalusimbi">Walusimbi Mahad </a></li>
 </ul>

@@ -24,3 +24,8 @@ This project is licensed under MIT license. see the ![LICENSE.md](LICENSE) file 
 
 ## Authors
 See list of <a href="https://github.com/collin5/precommit-hook/graphs/contributors">contributors</a> who participated in this project.
+
+## Credits
+<ul>
+ <li>Walusimbi Mahad <a href="https://github.com/andela-engmkwalusimbi">link</a></li>
+</ul>

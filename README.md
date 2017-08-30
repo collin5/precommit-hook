@@ -22,7 +22,7 @@ precommit.hook
 ## License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This project is licensed under MIT license. see the ![LICENSE.md](LICENSE) file for details
+This project is licensed under MIT license. see the ![LICENSE](LICENSE) file for details
 
 ## Authors
 See list of <a href="https://github.com/collin5/precommit-hook/graphs/contributors">contributors</a> who participated in this project.

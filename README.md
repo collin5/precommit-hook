@@ -19,6 +19,8 @@ In your project folder, just do
 ```
 precommit.hook
 ```
+Your code will now be automatically checked on every commit.
+
 ## License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 

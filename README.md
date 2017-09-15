@@ -5,7 +5,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/collin5/precommit-hook/badge.svg?branch=master)](https://coveralls.io/github/collin5/precommit-hook?branch=master)
 [![PyPI version](https://badge.fury.io/py/precommit-hook.svg)](https://badge.fury.io/py/precommit-hook)
 
-Auto check quality of your python code before commiting
+Auto check the quality of your python code before you ship it 
 
 ## Getting started
 These instructions will show you how to install and use the application

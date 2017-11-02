@@ -31,5 +31,6 @@ See list of <a href="https://github.com/collin5/precommit-hook/graphs/contributo
 
 ## Credits
 <ul>
+ <li><a href="https://github.com/collin5">Collins Abitekaniza </a></li>
  <li><a href="https://github.com/andela-engmkwalusimbi">Walusimbi Mahad </a></li>
 </ul>

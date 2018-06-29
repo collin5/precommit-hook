@@ -8,8 +8,7 @@ import os
 
 class Exec:
     @staticmethod
-    def add_pre_commit(path=os.getcwd()):
-
+    def add_pre_commit(path=os.environ["PWD"]):
         # if .git directory exists
         if os.path.isdir(os.path.join(path, ".git")):
             # make hook directory if not exists
@@ -27,7 +26,6 @@ class Exec:
 
 
 class Post_install(install):
-
     def run(self):
         install.run(self)
         Exec.add_pre_commit()

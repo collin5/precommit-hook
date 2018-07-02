@@ -11,7 +11,7 @@ import sys
 class Exec:
     @staticmethod
     def add_pre_commit(path=os.environ["PWD"]):
-        # if .git/hooks directory does not exists (which means a non valid git repo)
+        # if .git/hooks directory does not exist (which means a non valid git repo)
         if not os.path.isdir(os.path.join(path, ".git/hooks")):
             message = '*****************************************************************\n'
             message += '* Oops, this hook can only be installed on a local GIT repository\n'

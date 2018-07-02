@@ -3,6 +3,7 @@
 
 from setuptools.command.install import install
 from app.extras import template
+import stat
 import os
 import sys
 
@@ -21,7 +22,8 @@ class Exec:
         # Ok, it is a GIT repository...
         with open('{}/.git/hooks/pre-commit'.format(path), 'wb') as f:
             f.write(template.encode())
-            os.system("chmod +x {}/.git/hooks/pre-commit".format(path))
+            st = os.stat('{}/.git/hooks/pre-commit'.format(path))
+            os.chmod('{}/.git/hooks/pre-commit'.format(path), st.st_mode | stat.S_IEXEC)
         print("Precommit script added successfully, continuing ...")
         return True
 

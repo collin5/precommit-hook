@@ -9,8 +9,8 @@ class BaseTestCase(TestCase):
 
     def setUp(self):
         # create test temporary directory
-        os.system("mkdir -p tmp/")
+        os.system("mkdir -p /tmp/precommit-hook-tests && cd /tmp/precommit-hook-tests && git init")
 
     def tearDown(self):
         # remove all test files
-        os.system("rm -r tmp/")
+        os.system("rm -r /tmp/precommit-hook-tests")

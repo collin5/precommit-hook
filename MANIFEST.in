@@ -1,0 +1,11 @@
+include LICENSE
+include requirements.txt
+include requirements-dev.txt
+include LICENSE
+include README.md
+
+recursive-include app *
+
+recursive-exclude tests *
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]

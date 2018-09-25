@@ -20,7 +20,7 @@ with codecs.open(path.join(here, 'requirements-dev.txt'), encoding='utf-8') as f
 
 setup(
     name="precommit-hook",
-    version="0.1.8",
+    version="0.2.1",
     author="Collins Abitekaniza",
     author_email="abtcolns@gmail.com",
     packages=find_packages(),

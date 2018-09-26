@@ -1,36 +1,36 @@
-<a href="https://asciinema.org/a/135255" target="_blank"><img src="https://asciinema.org/a/135255.png" height="400" /></a>
-# precommit-hook
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/095d63a592e74b239b28b5e19e689709)](https://www.codacy.com/app/abtcolns/precommit-hook?utm_source=github.com&utm_medium=referral&utm_content=collin5/precommit-hook&utm_campaign=badger)
-[![Build Status](https://travis-ci.org/collin5/precommit-hook.svg?branch=master)](https://travis-ci.org/collin5/precommit-hook)
-[![Coverage Status](https://coveralls.io/repos/github/collin5/precommit-hook/badge.svg?branch=master)](https://coveralls.io/github/collin5/precommit-hook?branch=master)
-[![PyPI version](https://badge.fury.io/py/precommit-hook.svg)](https://badge.fury.io/py/precommit-hook)
 
-Auto check the quality of your python code before you ship it 
+<p align="center">
+<img src="https://user-images.githubusercontent.com/11579108/46106188-b8ad4b80-c1e0-11e8-994f-26d0899e2712.png" height="300">
+</p>
+
+# Precommit hook
+[![Build Status](https://img.shields.io/travis/collin5/precommit-hook.svg?branch=master&logo=appveyor)](https://travis-ci.org/collin5/precommit-hook)
+[![PyPI version](https://badge.fury.io/py/precommit-hook.svg)](https://badge.fury.io/py/precommit-hook)
+[![Say Thanks!](https://img.shields.io/badge/SayThanks.io-%E2%98%BC-1EAEDB.svg)](https://saythanks.io/to/collin5)
+
+Automatically check your python code on every commit.
 
 ## Getting started
-These instructions will show you how to install and use the application
+Inside a git repository, do
+ ```bash
+ $ pip install precommit-hook
+ ```
+ This will automatically add a hook to your repository that will automatically check your code everytime you make a commit.
 
-### Installation
- ```
- pip install precommit-hook
- ```
-### Usage 
-In your project folder, just do 
+## Add to requirements
+If you want to hook on every `pip install -r requirements.txt`, just add `precommit-hook` to your requirements with
+```bash
+$ pip freeze > requirements.txt
 ```
-precommit.hook
-```
-Your code will now be automatically checked on every commit.
 
 ## License
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-This project is licensed under MIT license. see the ![LICENSE](LICENSE) file for details
+This project is licensed under MIT license. see the ![LICENSE.md](LICENSE.md) file for details
+ 
 
-## Authors
-See list of <a href="https://github.com/collin5/precommit-hook/graphs/contributors">contributors</a> who participated in this project.
+## Oh, Thanks!
 
-## Credits
-<ul>
- <li><a href="https://github.com/collin5">Collins Abitekaniza </a></li>
- <li><a href="https://github.com/andela-engmkwalusimbi">Walusimbi Mahad </a></li>
-</ul>
+By the way... thank you! And if you'd like to [say thanks](https://saythanks.io/to/collin5)... :) 
+
+✨🍰✨
